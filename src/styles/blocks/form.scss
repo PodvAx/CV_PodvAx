@@ -1,0 +1,100 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
+
+  &__label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #918F8F;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  &__input {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    color: $whiteAccent;
+    padding: 10px 20px;
+    border:0;
+    border-bottom: 2px solid $whiteAccent;
+    width: 100%;
+    background-color: $blackAccent;
+
+    transition: border-bottom $transitionDuration, box-shadow $transitionDuration;
+
+    &:hover {
+      border-bottom: 2px solid $blueAccent;
+    }
+
+    &:focus {
+      border-bottom: 2px solid $blueAccent;
+      box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); // Додаємо тінь при фокусі
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  &__textarea {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    color: $whiteAccent;
+    padding: 10px 20px;
+    border:0;
+    border-bottom: 2px solid $whiteAccent;
+    width: 100%;
+    background-color: $blackAccent;
+
+    transition: border-bottom $transitionDuration, box-shadow $transitionDuration;
+
+    &:hover {
+      border-bottom: 2px solid $blueAccent;
+    }
+
+    &:focus {
+      border-bottom: 2px solid $blueAccent;
+      box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  &__button {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: $whiteAccent;
+    background-color: $blackAccent;
+    padding: 25px 50px;
+    letter-spacing: 2.5px;
+    border: 2px solid $whiteAccent;
+    border-top-color: $blackAccent;
+    border-inline-color: $blackAccent;
+    cursor: pointer;
+    transition: background-color $transitionDuration,
+                color $transitionDuration,
+                border-color $transitionDuration,
+                box-shadow $transitionDuration;
+
+    &:hover {
+      background-color: $blueAccent;
+      color: $blackAccent;
+      border-color: $whiteAccent;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+    }
+  }
+}

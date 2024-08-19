@@ -1,0 +1,31 @@
+{
+  "singleQuote": true,
+  "trailingComma": "all",
+  "printWidth": 80,
+  "plugins": ["prettier-plugin-organize-attributes"],
+  "organizeAttributes": {
+    "threshold": 4,
+    "order": [
+      "class",
+      "id",
+      "name",
+      "data-.+",
+      "src",
+      "for",
+      "type",
+      "href",
+      "values",
+      "title",
+      "alt",
+      "role",
+      "aria-.+",
+      "$unknown$"
+    ],
+    "groups": [
+      ["class", "id", "name", "data-.+"],
+      ["src", "for", "type", "href"],
+      ["values", "title", "alt", "role", "aria-.+"],
+      ["$unknown$"]
+    ]
+  }
+}

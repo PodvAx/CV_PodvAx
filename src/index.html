@@ -1,0 +1,222 @@
+<!doctype html>
+<html class="page" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>CV Oleksandr Podvoiskyi</title>
+    <link rel="stylesheet" href="./styles/index.scss" />
+  </head>
+  <body class="body page__body">
+    <header class="header body__header" id="#">
+      <a class="logo header__logo" href="##">
+        <span class="logo__bold">Oleksandr</span>Podvoiskyi
+      </a>
+
+      <nav class="nav header__nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="##">Home</a></li>
+          <li class="nav__item">
+            <a class="nav__link" href="#about">About</a>
+          </li>
+          <li class="nav__item"><a class="nav__link" href="#work">Work</a></li>
+        </ul>
+      </nav>
+
+      <a
+        class="header__github"
+        href="https://github.com/PodvAx/"
+        target="_blank"
+      ></a>
+    </header>
+
+    <main class="main body__main">
+      <section class="main__intro intro">
+        <article class="intro__greeting">
+          <p class="intro__name">Hello, I'm Oleksandr,</p>
+
+          <h1 class="intro__title">
+            Full Stack<br />
+            Developer
+          </h1>
+
+          <a class="intro__link" href="#contact">Contact me</a>
+        </article>
+
+        <article class="intro__photo">
+          <img
+            class="intro__img"
+            src="./images/podvax1.jpg"
+            alt="Oleksandr Podvoiskyi"
+          />
+        </article>
+      </section>
+
+      <section class="main__about about" id="about">
+        <h2 class="about__title">About</h2>
+        <p class="about__text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+          cumque asperiores explicabo sequi eos vero placeat, rem, unde sunt sed
+          ipsum? Voluptatum voluptates laudantium blanditiis iure iste, tempore
+          adipisci perferendis tempora saepe soluta aliquid et culpa est numquam
+          exercitationem dolor non, voluptatem impedit esse ad libero eveniet,
+          inventore totam dolorum.
+        </p>
+
+        <article class="about__experience">
+          <div class="about__field field">
+            <h3 class="field__title">Front-End</h3>
+
+            <p class="field__text">300+ Hours Experience</p>
+          </div>
+
+          <div class="about__field field">
+            <h3 class="field__title">Node.JS</h3>
+
+            <p class="field__text">60+ Hours Experience</p>
+          </div>
+
+          <div class="about__field field">
+            <h3 class="field__title">Computer Engineering</h3>
+
+            <p class="field__text">5 Years Studying</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="main__work work" id="work">
+        <h2 class="work__title">Work</h2>
+        <p class="work__text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+          deleniti minima voluptatum sunt consectetur consequuntur omnis,
+          laudantium totam reiciendis quisquam, dolorum odio rem! Natus
+          veritatis voluptas quaerat excepturi rerum iure iusto facere culpa
+          blanditiis ipsam cupiditate sequi asperiores, velit, eligendi minima
+          nihil nulla, cumque aliquam repellendus. Hic ducimus tempora suscipit?
+        </p>
+
+        <article class="work__works">
+          <a
+            class="work__link"
+            href="https://podvax.github.io/Phone_Catalog/"
+            target="_blank"
+          >
+            <img
+              class="work__img"
+              src="./images/work1.png"
+              alt="Phone Catalog Project"
+            />
+
+            <h3 class="work__name">Phone Catalog</h3>
+
+            <p class="work__instruments">React, TypeScript, SCSS</p>
+          </a>
+
+          <a
+            class="work__link"
+            href="https://podvax.github.io/2048_clone/"
+            target="_blank"
+          >
+            <img
+              class="work__img"
+              src="./images/work2.png"
+              alt="2048 Game Copy Project"
+            />
+
+            <h3 class="work__name">2048 Game Copy</h3>
+
+            <p class="work__instruments">JavaScript, HTML, SCSS</p>
+          </a>
+        </article>
+      </section>
+
+      <section class="main__contact contact" id="contact">
+        <h2 class="contact__title">Contact Me</h2>
+        <p class="contact__text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis
+          pariatur autem maiores ratione quasi est totam, nemo odio? Ea,
+          consequatur?
+        </p>
+
+        <form
+          class="contact__form form"
+          action="/"
+          method="post"
+          onsubmit="this.reset(); return false;"
+        >
+          <label class="form__label" for="name">
+            Name:
+            <input
+              class="form__input"
+              id="name"
+              type="text"
+              name="name"
+              autocomplete="given-name"
+              required
+            />
+          </label>
+
+          <label class="form__label" for="email">
+            Email:
+            <input
+              class="form__input"
+              id="email"
+              type="email"
+              name="email"
+              autocomplete="email"
+              required
+            />
+          </label>
+
+          <label class="form__label" for="message">
+            Message:
+            <textarea
+              class="form__textarea"
+              id="message"
+              name="message"
+              autocomplete="off"
+              rows="5"
+              required
+            ></textarea>
+          </label>
+
+          <button class="form__button" type="submit">Send message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer body__footer">
+      <a class="logo footer__logo" href="##">
+        <span class="logo__bold">Oleksandr</span>Podvoiskyi
+      </a>
+
+      <section class="footer__copyright">© 2024 PodvAx</section>
+
+      <section class="footer__links">
+        <a
+          class="footer__link footer__link--instagram"
+          href="https://www.instagram.com/0leksandr_podvoiskyi/"
+          target="_blank"
+          title="Go to my instagram page"
+        ></a>
+        <a
+          class="footer__link footer__link--facebook"
+          href="https://www.facebook.com/profile.php?id=100014936539367"
+          target="_blank"
+          title="Go to my facebook page"
+        ></a>
+        <a
+          class="footer__link footer__link--github"
+          href="https://github.com/PodvAx/"
+          target="_blank"
+          title="Go to my github page"
+        ></a>
+      </section>
+    </footer>
+  </body>
+</html>

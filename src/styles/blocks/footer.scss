@@ -1,0 +1,46 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 90px;
+
+  &__copyright {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__link {
+    width: 65px;
+    height: 60px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    transform: scale(1);
+    transition: transform $transitionDuration;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &--instagram {
+      background-image: url('../images/icons/instagram_icon.svg');
+    }
+
+    &--facebook {
+      background-image: url('../images/icons/facebook_icon.svg');
+    }
+
+    &--github {
+      background-image: url('../images/icons/github_icon.svg');
+    }
+  }
+}

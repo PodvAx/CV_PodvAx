@@ -1,0 +1,14 @@
+.body {
+  background-color: $blackAccent;
+  color: $whiteAccent;
+  font-size: 24px;
+  max-width: 1660px;
+
+  &__header {
+    padding: 40px 55px;
+  }
+
+  &__main {
+    padding-inline: 100px;
+  }
+}

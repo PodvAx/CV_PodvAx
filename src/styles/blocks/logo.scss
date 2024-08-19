@@ -1,0 +1,19 @@
+.logo {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: $whiteAccent;
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: transform $transitionDuration;
+  transform: scale(1);
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &__bold {
+    font-weight: 700;
+  }
+}
