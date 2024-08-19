@@ -3,13 +3,13 @@
   &__title {
     font-family: 'Poppins', sans-serif;
     font-weight: 800;
-    font-size: 75px;
+    font-size: 28px;
     color: $blueAccent;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 5%;
     white-space: nowrap;
 
     &::after {
@@ -20,11 +20,56 @@
       position: relative;
       width: 100%;
     }
+
+    @include onTablet {
+      font-size: 32px;
+    }
+
+    @include onSmallDesktop {
+      font-size: 45px;
+    }
+
+    @include onBigDesktop {
+      font-size: 75px;
+    }
   }
 
   &__text {
-    padding-inline: 125px;
+    margin-top: 20px;
+    padding-inline: 20px;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
+    font-size: 14px;
+
+    @include onTablet {
+      padding-inline: 50px;
+      font-size: 16px;
+    }
+
+    @include onSmallDesktop {
+      padding-inline: 75px;
+      font-size: 18px;
+    }
+
+    @include onBigDesktop {
+      padding-inline: 125px;
+      font-size: 24px;
+    }
+  }
+
+  &__form {
+    margin: 25px auto 0 auto;
+
+    @include onTablet {
+      margin: 50px auto 0 auto;
+    }
+
+    @include onSmallDesktop {
+      margin: 50px auto 0 auto;
+    }
+
+    @include onBigDesktop {
+      margin: 100px auto 0 auto;
+    }
   }
 }

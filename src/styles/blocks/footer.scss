@@ -1,35 +1,62 @@
 .footer {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column-reverse;
   align-items: center;
-  padding: 40px 90px;
+  gap: 20px;
+
+  @include onTablet {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+  }
 
   &__copyright {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 14px;
+
+    @include onTablet {
+      font-size: 16px;
+    }
+
+    @include onSmallDesktop {
+      font-size: 18px;
+    }
+
+    @include onBigDesktop {
+      font-size: 24px;
+    }
   }
 
   &__links {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
+
+    @include onTablet {
+      gap: 20px;
+    }
+
+    @include onSmallDesktop {
+      gap: 10px;
+    }
+
+    @include onBigDesktop {
+      gap: 20px;
+    }
   }
 
   &__link {
-    width: 65px;
-    height: 60px;
+    width: 35px;
+    height: 30px;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
 
     transform: scale(1);
     transition: transform $transitionDuration;
-
-    &:hover {
-      transform: scale(1.1);
-    }
 
     &--instagram {
       background-image: url('../images/icons/instagram_icon.svg');
@@ -41,6 +68,20 @@
 
     &--github {
       background-image: url('../images/icons/github_icon.svg');
+    }
+
+    @include onSmallDesktop {
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      width: 45px;
+      height: 40px;
+    }
+
+    @include onBigDesktop {
+      width: 65px;
+      height: 60px;
     }
   }
 }

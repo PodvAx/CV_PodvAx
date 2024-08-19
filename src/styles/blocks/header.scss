@@ -8,14 +8,24 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
 
     transition: transform $transitionDuration;
     transform: scale(1);
 
-    &:hover {
-      transform: scale(1.1);
+    @include onSmallDesktop {
+      width: 40px;
+      height: 40px;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    @include onBigDesktop {
+      width: 60px;
+      height: 60px;
     }
   }
 }

@@ -1,1 +1,19 @@
+.main {
 
+
+  &__about {
+    margin-top: 50px;
+
+    @include onTablet {
+      margin-top: 0px;
+    }
+  }
+
+  &__work {
+    margin-top: 100px;
+  }
+
+  &__contact {
+    margin-top: 100px;
+  }
+}

@@ -1,14 +1,61 @@
 .body {
   background-color: $blackAccent;
   color: $whiteAccent;
-  font-size: 24px;
   max-width: 1660px;
 
   &__header {
-    padding: 40px 55px;
+    padding: 5px 15px;
+
+    @include onTablet {
+      padding: 15px 25px;
+    }
+
+    @include onSmallDesktop {
+      padding: 30px 45px;
+    }
+
+    @include onBigDesktop {
+      padding: 40px 55px;
+    }
   }
 
   &__main {
-    padding-inline: 100px;
+    padding-inline: 10px;
+    margin-top: 20px;
+
+    @include onTablet {
+      padding-inline: 50px;
+      margin-top: 25px;
+    }
+
+    @include onSmallDesktop {
+      padding-inline: 50px;
+      margin-top: 50px;
+    }
+
+    @include onBigDesktop {
+      padding-inline: 100px;
+      margin-top: 70px;
+    }
+  }
+
+  &__footer {
+    margin-top: 100px;
+    padding: 5px 15px;
+
+    @include onTablet {
+      margin-top: 50px;
+      padding: 15px 25px;
+    }
+
+    @include onSmallDesktop {
+      padding: 30px 45px;
+      margin-top: 100px;
+    }
+
+    @include onBigDesktop {
+      padding: 40px 55px;
+      margin-top: 200px;
+    }
   }
 }

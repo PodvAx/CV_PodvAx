@@ -3,13 +3,13 @@
   &__title {
     font-family: 'Poppins', sans-serif;
     font-weight: 800;
-    font-size: 75px;
+    font-size: 28px;
     color: $blueAccent;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 5%;
 
     &::after {
       content: '';
@@ -19,19 +19,65 @@
       position: relative;
       width: 100%;
     }
+
+    @include onTablet {
+      font-size: 32px;
+    }
+
+    @include onSmallDesktop {
+      font-size: 45px;
+    }
+
+    @include onBigDesktop {
+      font-size: 75px;
+    }
   }
 
   &__text {
-    padding-inline: 125px;
+    margin-top: 20px;
+    padding-inline: 20px;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
+    font-size: 14px;
+
+    @include onTablet {
+      padding-inline: 50px;
+      font-size: 16px;
+    }
+
+    @include onSmallDesktop {
+      padding-inline: 75px;
+      font-size: 18px;
+    }
+
+    @include onBigDesktop {
+      padding-inline: 125px;
+      font-size: 24px;
+    }
   }
 
   &__works {
+    margin-top: 25px;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 85%;
+    margin: 25px auto 0 auto;
+
+    @include onTablet {
+      max-width: 65%;
+      gap: 30px;
+    }
+
+    @include onSmallDesktop {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin: 50px 0 0 0;
+      max-width: 100%;
+    }
   }
 
   &__link {
@@ -44,51 +90,82 @@
     flex-direction: column;
     align-items: flex-start;
 
-    border: 1px solid transparent;
-    box-shadow: 0 0 0 transparent;
-    transition: border $transitionDuration, box-shadow $transitionDuration;
+    border: 1px solid rgba(166, 187, 204, 0.9);
+    box-shadow:  3px 3px 5px rgba(166, 187, 204, 0.9);
+    transition: border $transitionDuration,
+                box-shadow $transitionDuration;
 
-    padding: 25px 40px;
+    padding: 5px 5px;
 
-    &:hover {
+    @include onTablet {
+      padding: 15px 25px;
+    }
+
+    @include onSmallDesktop {
+      border: 1px solid transparent;
+      box-shadow: 0 0 0 transparent;
+
+      &:hover {
         border: 1px solid rgba(166, 187, 204, 0.9);
         box-shadow: 0 4px 8px rgba(166, 187, 204, 0.9);
 
-      & .work__img {
-        transform: scale(1.1);
-      }
+        & .work__img {
+          transform: scale(1.1);
+        }
 
-      & .work__name {
-        color: $blueAccent;
-        text-decoration: underline;
-      }
+        & .work__name {
+          color: $blueAccent;
+          text-decoration: underline;
+        }
 
-      & .work__instruments {
-        text-decoration: underline;
+        & .work__instruments {
+          text-decoration: underline;
+        }
       }
+    }
+
+    @include onBigDesktop {
+      padding: 25px 40px;
     }
 
   }
 
   &__img {
-    width: 600px;
-    height: 350px;
+    width: 100%;
+    max-height: 500px;
 
     transition: transform $transitionDuration;
     transform: scale(1);
   }
 
   &__name {
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 700;
-    margin-top: 30px;
+    margin-top: 15px;
     line-height: 120%;
     transition: color $transitionDuration;
 
+    @include onTablet {
+      font-size: 18px;
+      margin-top: 15px;
+    }
+
+    @include onBigDesktop {
+      font-size: 24px;
+      margin-top: 30px;
+    }
   }
 
   &__instruments {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 400;
+
+    @include onTablet {
+      font-size: 14px;
+    }
+
+    @include onBigDesktop {
+      font-size: 18px;
+    }
   }
 }

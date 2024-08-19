@@ -4,16 +4,34 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 0;
+
+  @include onSmallDesktop {
+    gap: 10px;
+  }
 
   &__title {
     font-weight: 700;
-    font-size: 48px;
+    font-size: 32px;
+    text-align: center;
+
+
+    @include onTablet {
+      font-size: 24px;
+    }
+
+    @include onSmallDesktop {
+      font-size: 36px;
+    }
+
+    @include onBigDesktop {
+      font-size: 48px;
+    }
   }
 
   &__text {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 14px;
     position: relative;
 
     &::after {
@@ -25,6 +43,18 @@
       height: 1px;
       background-color: $whiteAccent;
       width:100%;
+    }
+
+    @include onTablet {
+      font-size: 14px;
+    }
+
+    @include onSmallDesktop {
+      font-size: 16px;
+    }
+
+    @include onBigDesktop {
+      font-size: 18px;
     }
   }
 }
