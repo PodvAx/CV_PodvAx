@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  color: #fff;
+  background-color: #221f1f;
+  font-size: 24px;
+}
+
+.header {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.header__github {
+  background-image: url("github_icon.a1295bd7.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 60px;
+  height: 60px;
+}
+
+.logo {
+  font-family: Inter, sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.logo__bold {
+  font-weight: 700;
+}
+/*# sourceMappingURL=index.971c2ea4.css.map */
